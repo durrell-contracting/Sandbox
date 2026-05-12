@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Redaction/.vs
+/Redaction/OpenXmlProcessor/bin
+/Redaction/OpenXmlProcessor/obj
+/Redaction/OpenXmlProcessor/Properties/launchSettings.json
+/Redaction/OpenXmlProcessor.Tests/bin
+/Redaction/OpenXmlProcessor.Tests/obj
