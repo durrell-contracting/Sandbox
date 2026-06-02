@@ -1,7 +1,3 @@
-using System;
-using Xunit;
-using Problem._3093;
-
 namespace Problem._3093.Tests;
 
 public class SuffixComparerTests
@@ -64,5 +60,29 @@ public class SuffixComparerTests
         var result = sc.LongestCommonSuffixIndices(queries);
 
         Assert.Equal([-1, -1], result);
+    }
+
+    [Fact]
+    public void LeetExample1()
+    {
+        var container = new[] { "abcd", "bcd", "xbcd" };
+        var queries = new[] { "cd", "bcd", "xyz" };
+
+        var sc = new SuffixComparer(container);
+        var result = sc.LongestCommonSuffixIndices(queries);
+
+        Assert.Equal([1, 1, 1], result);
+    }
+
+    [Fact]
+    public void LeetExample2()
+    {
+        var container = new[] { "abcdefgh", "poiuygh", "ghghgh" };
+        var queries = new[] { "gh", "acbfgh", "acbfegh" };
+
+        var sc = new SuffixComparer(container);
+        var result = sc.LongestCommonSuffixIndices(queries);
+
+        Assert.Equal([2, 0, 2], result);
     }
 }
