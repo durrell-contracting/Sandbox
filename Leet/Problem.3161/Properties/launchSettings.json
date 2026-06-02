@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Problem.3161": {
+      "commandName": "Project",
+      "commandLineArgs": "Data/Example.001.json",
+      "workingDirectory": "C:\\Repos\\Sandbox\\Leet\\Problem.3161"
+    }
+  }
+}
