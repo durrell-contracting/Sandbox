@@ -1,7 +1,7 @@
-﻿using DatabaseAccess.Configuration;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Reveal.DatabaseAccess.Configuration;
 
-namespace DatabaseAccess.Models;
+namespace Reveal.DatabaseAccess.Models;
 
 public partial class RevealContext : DbContext
 {
@@ -69,7 +69,7 @@ public partial class RevealContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseNpgsql(new DatabaseConfig().GetConnectionString());
+            optionsBuilder.UseNpgsql(new DatabaseConfig().ConnectionString);
         }
 
         base.OnConfiguring(optionsBuilder);

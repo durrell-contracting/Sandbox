@@ -1,4 +1,4 @@
-﻿namespace DatabaseAccess.Configuration;
+﻿namespace Reveal.DatabaseAccess.Configuration;
 
 public class DatabaseConfig
 {
@@ -8,6 +8,6 @@ public class DatabaseConfig
     public string Password { get; set; } = "password";
     public string Database { get; set; } = "reveal";
 
-    public string GetConnectionString() =>
+    public string ConnectionString =>
         $"Host={Host};Port={Port};Username={Username};Password={Password};Database={Database}";
 }

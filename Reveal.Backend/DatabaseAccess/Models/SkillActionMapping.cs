@@ -1,4 +1,4 @@
-﻿namespace DatabaseAccess.Models;
+﻿namespace Reveal.DatabaseAccess.Models;
 
 public partial class SkillActionMapping
 {

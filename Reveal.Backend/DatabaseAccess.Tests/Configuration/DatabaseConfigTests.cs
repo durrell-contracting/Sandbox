@@ -1,7 +1,7 @@
-using DatabaseAccess.Configuration;
 using FluentAssertions;
+using Reveal.DatabaseAccess.Configuration;
 
-namespace DatabaseAccess.Tests.Configuration;
+namespace Reveal.DatabaseAccess.Tests.Configuration;
 
 public class DatabaseConfigTests
 {
@@ -13,7 +13,7 @@ public class DatabaseConfigTests
         var expected = "Host=localhost;Port=5432;Username=postgres;Password=password;Database=reveal";
 
         // Act
-        var result = config.GetConnectionString();
+        var result = config.ConnectionString;
 
         // Assert
         result.Should().Be(expected);
@@ -34,7 +34,7 @@ public class DatabaseConfigTests
         var expected = "Host=prod-db.example.com;Port=5433;Username=admin;Password=secret;Database=production_db";
 
         // Act
-        var result = config.GetConnectionString();
+        var result = config.ConnectionString;
 
         // Assert
         result.Should().Be(expected);
@@ -63,7 +63,7 @@ public class DatabaseConfigTests
         var config = new DatabaseConfig { Host = host };
 
         // Act
-        var result = config.GetConnectionString();
+        var result = config.ConnectionString;
 
         // Assert
         result.Should().Contain("Host=");

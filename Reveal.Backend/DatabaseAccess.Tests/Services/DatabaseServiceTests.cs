@@ -1,9 +1,9 @@
-using DatabaseAccess.Models;
-using DatabaseAccess.Services;
+using Reveal.DatabaseAccess.Models;
+using Reveal.DatabaseAccess.Services;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 
-namespace DatabaseAccess.Tests.Services;
+namespace Reveal.DatabaseAccess.Tests.Services;
 
 public class DatabaseServiceTests : IDisposable
 {

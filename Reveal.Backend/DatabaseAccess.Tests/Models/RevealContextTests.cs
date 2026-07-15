@@ -1,7 +1,7 @@
-using DatabaseAccess.Models;
+using Reveal.DatabaseAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DatabaseAccess.Tests.Models;
+namespace Reveal.DatabaseAccess.Tests.Models;
 
 public class RevealContextTests : IDisposable
 {

@@ -1,7 +1,8 @@
-﻿using DatabaseAccess.Models;
+﻿using Reveal.DatabaseAccess.Models;
 using Microsoft.EntityFrameworkCore;
+using Reveal.CommonObjects.DTOs;
 
-namespace DatabaseAccess.Services;
+namespace Reveal.DatabaseAccess.Services;
 
 public class DatabaseService : IDatabaseService
 {
@@ -10,6 +11,21 @@ public class DatabaseService : IDatabaseService
     public DatabaseService(RevealContext context)
     {
         _context = context;
+    }
+
+    public Task<string> CreateMpegFileRecordAsync(MpegFileRecord record)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<MpegFileRecord> GetMpegFileRecordAsync(string recordId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task UpdateMpegFileRecordAsync(string recordId, MpegFileRecord record)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<bool> HealthCheckAsync(CancellationToken cancellationToken = default)

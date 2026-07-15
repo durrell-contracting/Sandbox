@@ -1,10 +1,10 @@
-﻿using DatabaseAccess.Configuration;
-using DatabaseAccess.Models;
-using DatabaseAccess.Services;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Reveal.DatabaseAccess.Configuration;
+using Reveal.DatabaseAccess.Models;
+using Reveal.DatabaseAccess.Services;
 
-namespace DatabaseAccess.Extensions;
+namespace Reveal.DatabaseAccess.Extensions;
 
 public static class ServiceCollectionExtensions
 {
@@ -17,7 +17,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped(_ => config);
 
         services.AddDbContext<RevealContext>(options =>
-            options.UseNpgsql(config.GetConnectionString()));
+            options.UseNpgsql(config.ConnectionString));
 
         services.AddScoped<IDatabaseService, DatabaseService>();
 

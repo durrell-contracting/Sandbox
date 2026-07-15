@@ -1,11 +1,11 @@
-using DatabaseAccess.Configuration;
-using DatabaseAccess.Extensions;
-using DatabaseAccess.Models;
-using DatabaseAccess.Services;
+using Reveal.DatabaseAccess.Configuration;
+using Reveal.DatabaseAccess.Extensions;
+using Reveal.DatabaseAccess.Models;
+using Reveal.DatabaseAccess.Services;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DatabaseAccess.Tests.Extensions;
+namespace Reveal.DatabaseAccess.Tests.Extensions;
 
 public class ServiceCollectionExtensionsTests
 {
