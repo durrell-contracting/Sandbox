@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectStorage.Tests", "Obje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MpegUpload.Tests", "MpegUpload.Tests\MpegUpload.Tests.csproj", "{E430F60B-17D2-4DFC-BCE2-E5BBB594CA1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MpegUpload", "MpegUpload\MpegUpload.csproj", "{D9AB8AF8-BB72-44C4-B3D0-6EE7479AC184}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{E430F60B-17D2-4DFC-BCE2-E5BBB594CA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E430F60B-17D2-4DFC-BCE2-E5BBB594CA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E430F60B-17D2-4DFC-BCE2-E5BBB594CA1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9AB8AF8-BB72-44C4-B3D0-6EE7479AC184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9AB8AF8-BB72-44C4-B3D0-6EE7479AC184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9AB8AF8-BB72-44C4-B3D0-6EE7479AC184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9AB8AF8-BB72-44C4-B3D0-6EE7479AC184}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,25 +2,17 @@ using Reveal.CommonObjects.DTOs;
 using Reveal.DatabaseAccess.Services;
 using Reveal.MessageBroker.Services;
 using Reveal.ObjectStorage.Services;
-using WebAPI.Services;
 
-namespace Reveal.WebAPI.Services;
+namespace Reveal.MpegUpload.Services;
 
-public class MpegUploadService : IMpegUploadService
+public class MpegUploadService(
+    IObjectStorageService objectStorageService,
+    IDatabaseService databaseService,
+    IMessageBrokerService messageBusService) : IMpegUploadService
 {
-    private readonly IObjectStorageService _objectStorageService;
-    private readonly IDatabaseService _databaseService;
-    private readonly IMessageBrokerService _messageBusService;
-
-    public MpegUploadService(
-        IObjectStorageService objectStorageService,
-        IDatabaseService databaseService,
-        IMessageBrokerService messageBusService)
-    {
-        _objectStorageService = objectStorageService ?? throw new ArgumentNullException(nameof(objectStorageService));
-        _databaseService = databaseService ?? throw new ArgumentNullException(nameof(databaseService));
-        _messageBusService = messageBusService ?? throw new ArgumentNullException(nameof(messageBusService));
-    }
+    private readonly IObjectStorageService _objectStorageService = objectStorageService ?? throw new ArgumentNullException(nameof(objectStorageService));
+    private readonly IDatabaseService _databaseService = databaseService ?? throw new ArgumentNullException(nameof(databaseService));
+    private readonly IMessageBrokerService _messageBusService = messageBusService ?? throw new ArgumentNullException(nameof(messageBusService));
 
     public async Task<MpegUploadResult> ProcessMpegUploadAsync(string filename, Stream fileStream)
     {

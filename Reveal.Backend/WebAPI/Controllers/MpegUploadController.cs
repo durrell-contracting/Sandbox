@@ -1,18 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.Services;
+using Reveal.MpegUpload.Services;
 
 namespace Reveal.WebAPI.Controllers;
 
 [ApiController]
 [Route("api/mpeg")]
-public class MpegUploadController : ControllerBase
+public class MpegUploadController(IMpegUploadService mpegUploadService) : ControllerBase
 {
-    private readonly IMpegUploadService _mpegUploadService;
-
-    public MpegUploadController(IMpegUploadService mpegUploadService)
-    {
-        _mpegUploadService = mpegUploadService ?? throw new ArgumentNullException(nameof(mpegUploadService));
-    }
+    private readonly IMpegUploadService _mpegUploadService = mpegUploadService ?? throw new ArgumentNullException(nameof(mpegUploadService));
 
     [HttpPost]
     [Route("upload")]
@@ -47,8 +42,8 @@ public class MpegUploadController : ControllerBase
         }
     }
 
-    private static readonly List<string> AllowedExtensions = new List<string> { ".mp3", ".mp4", ".mpeg", ".mpg" };
-    private static readonly List<string> AllowedMimeTypes = new List<string> { "video/mpeg", "audio/mpeg" };
+    private static readonly List<string> AllowedExtensions = [".mp3", ".mp4", ".mpeg", ".mpg"];
+    private static readonly List<string> AllowedMimeTypes = ["video/mpeg", "audio/mpeg"];
     private static bool IsValidMpegFile(IFormFile file)
     {
         if (file == null || file.Length == 0)

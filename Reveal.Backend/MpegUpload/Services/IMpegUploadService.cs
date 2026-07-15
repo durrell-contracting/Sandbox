@@ -1,6 +1,6 @@
 using Reveal.CommonObjects.DTOs;
 
-namespace WebAPI.Services;
+namespace Reveal.MpegUpload.Services;
 
 public interface IMpegUploadService
 {

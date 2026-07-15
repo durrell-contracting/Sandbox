@@ -15,9 +15,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommonObjects\CommonObjects.csproj" />
-    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj" />
-    <ProjectReference Include="..\MessageBroker\MessageBroker.csproj" />
-    <ProjectReference Include="..\ObjectStorage\ObjectStorage.csproj" />
+    <ProjectReference Include="..\MpegUpload\MpegUpload.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
